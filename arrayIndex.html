@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label for="fname">First Name :</label>
+        <input type="text" id="fname" />
+        <label for="lname">Last Name :</label>
+        <input type="text" id="lname">
+        <label for="email">Email :</label>
+        <input type="text" id="email">
+        <label>Mobile Number:</label>
+        <input type="text" id="mobile"><br><br>
+        <button type="button" id="getInput">Submit</button> <br> <br>
+        <button type="button" onclick="addElementToTop()">Add Element at Top</button> <br> <br>
+        <button type="button" onclick="removeLastElement()">Remove Last Element</button> <br> <br>
+        <button type="button" onclick="removeElementAtIndex()">Remove the perticular row</button> 
+        <button type="button" onclick="addElementAtIndex()"> add Element At Index</button> <br> <br>
+
+    <div id="dataView"></div>
+    <script type="module">
+        import {createTableView} from "./createTableView.js";
+        import {getInput} from "./appendData.js";
+        import {addElementToTop} from "./addElementToTop.js";
+        import {removeLastElement} from "./removeLastElement.js";
+        import {removeElementAtIndex} from "./removeElementAtIndex.js";
+        import {addElementAtIndex } from "./addElementAtIndex.js";
+
+        document.querySelector('#getInput').addEventListener('click', getInput);
+            window.createTableView = createTableView;
+            window.addElementToTop = addElementToTop;
+            window.removeLastElement = removeLastElement;
+            window.removeElementAtIndex = removeElementAtIndex;
+            window.addElementToTop = addElementToTop;
+            window.addElementAtIndex =addElementAtIndex;
+
+    </script>  
+
+</body>
+</html>
